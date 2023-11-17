@@ -1,8 +1,8 @@
 import { createRoot } from "react-dom/client";
-import SearchParams from "./SearchParams.jsx";
+import SearchParams from "./pages/SearchParams.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
-import Details from "./Details.jsx";
+import Details from "./pages/Details.jsx";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,7 +20,6 @@ const App = () => {
         <header>
           <Link to={"/"}>Adopt Me!</Link>
         </header>
-        <h1>Adopt Me!</h1>
         <Routes>
           <Route path="/details/:id" element={<Details />} />
           <Route path="/" element={<SearchParams />} />

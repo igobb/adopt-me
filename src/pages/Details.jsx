@@ -28,8 +28,8 @@ const Details = () => {
 
   if (results.isLoading) {
     return (
-      <div className="loading-pane">
-        <h2 className="loader">@</h2>
+      <div className="h-screen flex items-center justify-center">
+        <h2 className="text-2xl animate-spin">Loading.. 🐶</h2>
       </div>
     );
   }

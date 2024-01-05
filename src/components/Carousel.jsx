@@ -21,11 +21,11 @@ class Carousel extends Component {
     const { images } = this.props;
 
     return (
-      <div className="flex justify-around items-center h-[400px] mt-[8px]">
+      <div className="flex justify-around items-center h-[400px] mt-3 mb-3">
         <img
           src={images[active]}
           alt="animal hero"
-          className="max-w-[400px] max-h-[400px]"
+          className="max-w-[400px] max-h-[400px] rounded-md "
         />
 
         <div className="w-1/2">
@@ -38,7 +38,7 @@ class Carousel extends Component {
               src={photo}
               className={
                 index === active
-                  ? "w-[120px] h-[120px] rounded-lg inline-block m-[15px] cursor-pointer border-2 opacity-80"
+                  ? "w-[125px] h-[125px] rounded-lg inline-block m-[15px] cursor-pointer border-3 opacity-80"
                   : "w-[120px] h-[120px] rounded-lg inline-block m-[15px] cursor-pointer border-2"
               }
               alt="animal thumbnail"

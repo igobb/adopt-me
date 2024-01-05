@@ -2,10 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import fetchPet from "../fetchers/fetchPet";
 import Carousel from "../components/Carousel";
 import ErrorBoundary from "../components/ErrorBoundary";
-import Modal from "../modals/Modal";
-import { useContext, useState } from "react";
+import { lazy, useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import AdoptedPetContext from "../context/AdoptedPetContext";
+
+const Modal = lazy(() => import("../modals/Modal"));
 
 const Details = () => {
   const navigate = useNavigate();
@@ -40,8 +41,8 @@ const Details = () => {
       <Carousel images={pet.images} />
 
       <div>
-        <h1 className="text-center text-2xl my-[5px]">{pet.name}</h1>
-        <h2 className="text-center mt-[5px] mb-[20px]">
+        <h1 className="text-center text-3xl my-[5px]">{pet.name}</h1>
+        <h2 className="text-center mt-[5px] mb-[20px] text-2xl">
           {pet.animal} - {pet.breed} - {pet.city} - {pet.state}
         </h2>
         <button
@@ -53,21 +54,21 @@ const Details = () => {
         <p className="my-2 py-0 px-[15px]">{pet.description}</p>
         {showModal ? (
           <Modal>
-            <div className="max-w-[500px] p-4 text-center rounded-lg bg-[#faeff0]">
-              <h1 className="text-xl">Would you like to adopt {pet.name}?</h1>
+            <div className="w-[400px] p-10 text-center rounded-lg bg-[#fbf8f8]">
+              <h1 className="text-3xl">Would you like to adopt {pet.name}?</h1>
               <div>
                 <button
                   onClick={() => {
                     setAdoptedPet(pet);
                     navigate("/");
                   }}
-                  className="inline-block mr-4 hover:text-green-500"
+                  className="inline-block mr-4 hover:text-gray-200 text-2xl hover:bg-green-400 py-1 px-4 rounded-md"
                 >
                   Yes
                 </button>
                 <button
                   onClick={() => setShowModal(false)}
-                  className="inline-block mr-4 hover:text-red-500"
+                  className="inline-block mr-4 hover:text-gray-200 text-2xl hover:bg-red-400 py-1 px-4 rounded-md"
                 >
                   No
                 </button>

@@ -14,7 +14,7 @@ const Modal = ({ children }) => {
   }, []);
 
   return createPortal(
-    <div className="bg-white opacity-90 fixed left-0 right-0 bottom-0 top-0 z-10 flex justify-center items-center">
+    <div className="bg-black opacity-90 fixed left-0 right-0 bottom-0 top-0 z-10 flex justify-center items-center">
       {children}
     </div>,
     elRef.current

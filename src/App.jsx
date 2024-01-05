@@ -1,10 +1,11 @@
 import { createRoot } from "react-dom/client";
-import SearchParams from "./pages/SearchParams.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
-import Details from "./pages/Details.jsx";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import AdoptedPetContext from "./context/AdoptedPetContext.js";
+
+const Details = lazy(() => import("./pages/Details.jsx"));
+const SearchParams = lazy(() => import("./pages/SearchParams.jsx"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -28,18 +29,26 @@ const App = () => {
       <AdoptedPetContext.Provider value={adoptedPet}>
         <BrowserRouter>
           <QueryClientProvider client={queryClient}>
-            <header className="w-full mb-10 text-center p-7 bg-gradient-to-b from-blue-400 via-blue-200 to-#f7fcf8 backdrop-blur-md">
-              <Link
-                className="text-6xl text-blue-800 hover:text-blue-700 font-comic-sans"
-                to={"/"}
-              >
-                Adopt Me!
-              </Link>
-            </header>
-            <Routes>
-              <Route path="/details/:id" element={<Details />} />
-              <Route path="/" element={<SearchParams />} />
-            </Routes>
+            <Suspense
+              fallback={
+                <div className="h-screen flex items-center justify-center">
+                  <h2 className="text-2xl animate-spin">Loading.. 🐶</h2>
+                </div>
+              }
+            >
+              <header className="w-full mb-10 text-center p-7 bg-gradient-to-b from-blue-400 via-blue-200 to-#f7fcf8 backdrop-blur-md">
+                <Link
+                  className="text-6xl text-blue-800 hover:text-blue-700 font-comic-sans"
+                  to={"/"}
+                >
+                  Adopt Me!
+                </Link>
+              </header>
+              <Routes>
+                <Route path="/details/:id" element={<Details />} />
+                <Route path="/" element={<SearchParams />} />
+              </Routes>
+            </Suspense>
           </QueryClientProvider>
         </BrowserRouter>
       </AdoptedPetContext.Provider>

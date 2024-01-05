@@ -1,6 +1,5 @@
-import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import { useState, lazy, Suspense } from "react";
 import AdoptedPetContext from "./context/AdoptedPetContext.js";
 
@@ -12,6 +11,7 @@ const queryClient = new QueryClient({
     queries: {
       staleTime: Infinity,
       cacheTime: Infinity,
+      suspense: true,
     },
   },
 });
@@ -27,35 +27,31 @@ const App = () => {
       }}
     >
       <AdoptedPetContext.Provider value={adoptedPet}>
-        <BrowserRouter>
-          <QueryClientProvider client={queryClient}>
-            <Suspense
-              fallback={
-                <div className="h-screen flex items-center justify-center">
-                  <h2 className="text-2xl animate-spin">Loading.. 🐶</h2>
-                </div>
-              }
-            >
-              <header className="w-full mb-10 text-center p-7 bg-gradient-to-b from-blue-400 via-blue-200 to-#f7fcf8 backdrop-blur-md">
-                <Link
-                  className="text-6xl text-blue-800 hover:text-blue-700 font-comic-sans"
-                  to={"/"}
-                >
-                  Adopt Me!
-                </Link>
-              </header>
-              <Routes>
-                <Route path="/details/:id" element={<Details />} />
-                <Route path="/" element={<SearchParams />} />
-              </Routes>
-            </Suspense>
-          </QueryClientProvider>
-        </BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <Suspense
+            fallback={
+              <div className="h-screen flex items-center justify-center">
+                <h2 className="text-2xl animate-spin">Loading.. 🐶</h2>
+              </div>
+            }
+          >
+            <header className="w-full mb-10 text-center p-7 bg-gradient-to-b from-blue-400 via-blue-200 to-#f7fcf8 backdrop-blur-md">
+              <Link
+                className="text-6xl text-blue-800 hover:text-blue-700 font-comic-sans"
+                to={"/"}
+              >
+                Adopt Me!
+              </Link>
+            </header>
+            <Routes>
+              <Route path="/details/:id" element={<Details />} />
+              <Route path="/" element={<SearchParams />} />
+            </Routes>
+          </Suspense>
+        </QueryClientProvider>
       </AdoptedPetContext.Provider>
     </div>
   );
 };
 
-const container = document.getElementById("root");
-const root = createRoot(container);
-root.render(<App />);
+export default App;

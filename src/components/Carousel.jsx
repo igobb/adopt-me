@@ -21,10 +21,14 @@ class Carousel extends Component {
     const { images } = this.props;
 
     return (
-      <div className="carousel">
-        <img src={images[active]} alt="animal hero" />
+      <div className="flex justify-around items-center h-[400px] mt-[8px]">
+        <img
+          src={images[active]}
+          alt="animal hero"
+          className="max-w-[400px] max-h-[400px]"
+        />
 
-        <div className="carousel-smaller">
+        <div className="w-1/2">
           {images.map((photo, index) => (
             // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
             <img
@@ -32,7 +36,11 @@ class Carousel extends Component {
               data-index={index}
               key={photo}
               src={photo}
-              className={index === active ? "active" : ""}
+              className={
+                index === active
+                  ? "w-[120px] h-[120px] rounded-lg inline-block m-[15px] cursor-pointer border-2 opacity-80"
+                  : "w-[120px] h-[120px] rounded-lg inline-block m-[15px] cursor-pointer border-2"
+              }
               alt="animal thumbnail"
             />
           ))}

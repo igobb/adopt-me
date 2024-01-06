@@ -11,19 +11,20 @@ import {
   Fragment,
 } from "react";
 import AdoptedPetContext from "../context/AdoptedPetContext";
+import { Animal } from "../types/APIResponsesTypes";
 
-const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
+const ANIMALS: Animal[] = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 const SearchParams = () => {
   const [adoptedPet] = useContext(AdoptedPetContext);
 
   const [requestParams, setRequestParams] = useState({
     location: "",
-    animal: "",
+    animal: "" as Animal,
     breed: "",
   });
 
-  const [animal, setAnimal] = useState("");
+  const [animal, setAnimal] = useState("" as Animal);
   const [breeds] = useBreedList(animal);
 
   const [isPending, startTransition] = useTransition();
@@ -45,11 +46,12 @@ const SearchParams = () => {
         className="p-10 mb-10 rounded-lg bg-gray-200 shadow-lg flex flex-col justify-center items-center"
         onSubmit={(e) => {
           e.preventDefault();
-          const formData = new FormData(e.target);
+          const formData = new FormData(e.currentTarget);
           const obj = {
-            animal: formData.get("animal") ?? "",
-            breed: formData.get("breed") ?? "",
-            location: formData.get("location") ?? "",
+            animal:
+              (formData.get("animal")?.toString() as Animal) ?? ("" as Animal),
+            breed: formData.get("breed")?.toString() ?? "",
+            location: formData.get("location")?.toString() ?? "",
           };
 
           startTransition(() => setRequestParams(obj));
@@ -83,7 +85,7 @@ const SearchParams = () => {
             id="animal"
             value={animal}
             onChange={(e) => {
-              setAnimal(e.target.value);
+              setAnimal(e.target.value as Animal);
             }}
             className="search-input"
           >
@@ -119,9 +121,9 @@ const SearchParams = () => {
         </label>
 
         {isPending ? (
-          <div className="h-screen flex items-center justify-center">
-            <h2 className="text-2xl animate-spin">Loading.. 🐶</h2>
-          </div>
+          <button className="rounded px-6 py-2 color text-white hover:opacity-80 border-none bg-blue-400">
+            Loading.. 🐶
+          </button>
         ) : (
           <button className="rounded px-6 py-2 color text-white hover:opacity-80 border-none bg-blue-400">
             Submit

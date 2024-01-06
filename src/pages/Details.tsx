@@ -10,9 +10,14 @@ const Modal = lazy(() => import("../modals/Modal"));
 
 const Details = () => {
   const navigate = useNavigate();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [, setAdoptedPet] = useContext(AdoptedPetContext);
 
   const { id } = useParams();
+
+  if (!id) {
+    throw new Error("Dont have any ID");
+  }
 
   const results = useQuery(["details", id], fetchPet);
 
@@ -34,7 +39,11 @@ const Details = () => {
     );
   }
 
-  const pet = results.data.pets[0];
+  const pet = results?.data?.pets[0];
+
+  if (!pet) {
+    throw new Error("No pets here");
+  }
 
   return (
     <div className="w-[1100px] mt-0 mb-[25px] mx-auto p-5 rounded-sm shadow-lg bg-gray-200">

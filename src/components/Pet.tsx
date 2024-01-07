@@ -20,7 +20,12 @@ const Pet = ({ name, animal, breed, images, location, id }: IProps) => {
   return (
     <Link to={`/details/${id}`} className="relative block">
       <div className="w-full h-full">
-        <img src={hero} alt={name} className="w-full h-full rounded-sm" />
+        <img
+          data-testid="thumbnail"
+          src={hero}
+          alt={name}
+          className="w-full h-full rounded-sm"
+        />
       </div>
 
       <div className="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg">

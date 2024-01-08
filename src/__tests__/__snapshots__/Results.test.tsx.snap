@@ -1,0 +1,599 @@
+// Vitest Snapshot v1
+
+exports[`Renders correctly with some pets 1`] = `
+<DocumentFragment>
+  <div
+    class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-lg"
+  >
+    <a
+      class="relative block"
+      href="/details/1"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Luna"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/dog25.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Luna
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          dog - Havanese - Seattle, WA
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/2"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Charisse"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/rabbit0.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Charisse
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          rabbit - Havanese - Lexington, KY
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/3"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Maitilde"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/rabbit1.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Maitilde
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          rabbit - Lab - Dallas, TX
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/4"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Natalina"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/rabbit2.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Natalina
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          rabbit - Lab - Tampa, FL
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/5"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Michail"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/reptile1.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Michail
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          reptile - Havanese - Tuscaloosa, AL
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/6"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Gizela"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/bird2.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Gizela
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          bird - Havanese - Carol Stream, IL
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/7"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Laughton"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/reptile2.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Laughton
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          reptile - Havanese - Bridgeport, CT
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/8"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Si"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/dog0.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Si
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          dog - Lab - Charlotte, NC
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/9"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Lyda"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/rabbit3.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Lyda
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          rabbit - Lab - Springfield, IL
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/10"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Jackquelin"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/dog1.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Jackquelin
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          dog - Lab - Tucson, AZ
+        </h2>
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders correctly with some pets 1`] = `
+<DocumentFragment>
+  <div
+    class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 rounded-lg"
+  >
+    <a
+      class="relative block"
+      href="/details/1"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Luna"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/dog25.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Luna
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          dog - Havanese - Seattle, WA
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/2"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Charisse"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/rabbit0.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Charisse
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          rabbit - Havanese - Lexington, KY
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/3"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Maitilde"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/rabbit1.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Maitilde
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          rabbit - Lab - Dallas, TX
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/4"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Natalina"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/rabbit2.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Natalina
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          rabbit - Lab - Tampa, FL
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/5"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Michail"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/reptile1.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Michail
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          reptile - Havanese - Tuscaloosa, AL
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/6"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Gizela"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/bird2.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Gizela
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          bird - Havanese - Carol Stream, IL
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/7"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Laughton"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/reptile2.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Laughton
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          reptile - Havanese - Bridgeport, CT
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/8"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Si"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/dog0.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Si
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          dog - Lab - Charlotte, NC
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/9"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Lyda"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/rabbit3.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Lyda
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          rabbit - Lab - Springfield, IL
+        </h2>
+      </div>
+    </a>
+    <a
+      class="relative block"
+      href="/details/10"
+    >
+      <div
+        class="w-full h-full"
+      >
+        <img
+          alt="Jackquelin"
+          class="w-full h-full rounded-sm"
+          data-testid="thumbnail"
+          src="http://pets-images.dev-apis.com/pets/dog1.jpg"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 bg-gradient-to-tr from-white to-transparent pl-1 pr-2 pt-1 w-full text-lg"
+      >
+        <h1
+          class="font-semibold text-3xl"
+        >
+          Jackquelin
+        </h1>
+        <h2
+          class="text-xl"
+        >
+          dog - Lab - Tucson, AZ
+        </h2>
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;

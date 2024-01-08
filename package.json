@@ -15,7 +15,8 @@
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
     "typecheck": "tsc --noEmit",
-    "test": "vitest"
+    "test": "vitest --run",
+    "test:coverage": "vitest --coverage"
   },
   "keywords": [],
   "author": "Tomasz Gołąb",
@@ -28,6 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
     "@vitejs/plugin-react": "2.1.0",
+    "@vitest/coverage-c8": "^0.33.0",
     "autoprefixer": "^10.4.12",
     "eslint": "8.24.0",
     "eslint-config-prettier": "8.5.0",
@@ -42,7 +44,7 @@
     "tailwindcss": "^3.1.8",
     "typescript": "^4.8.4",
     "vite": "3.1.4",
-    "vitest": "^0.24.3",
+    "vitest": "^0.31.0",
     "vitest-fetch-mock": "^0.2.1"
   },
   "dependencies": {

@@ -4,7 +4,7 @@ import Results from "../components/Results";
 import { StaticRouter } from "react-router-dom/server";
 import { pets } from "./helpers/ArrayOfPets";
 
-test("Renders correct with no pest", () => {
+test("renders correct with no pest", () => {
   const { asFragment } = render(<Results pets={[]} />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
@@ -19,7 +19,7 @@ test("Renders correct with no pest", () => {
   `);
 });
 
-test("Renders correctly with some pets", () => {
+test("renders correctly with some pets", () => {
   const { asFragment } = render(
     <StaticRouter location={"/"}>
       <Results pets={pets} />
